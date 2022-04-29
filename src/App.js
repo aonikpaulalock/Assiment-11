@@ -1,10 +1,20 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Home from './Pages/Home/Home/Home';
+import Inventory from './Pages/Home/Inventory/Inventory';
+import Login from './Pages/Login/Login/Login';
+import Header from './Pages/Seared/Header/Header';
 
 function App() {
   return (
     <div>
-     
+      <Header/>
+     <Routes>
+       <Route path="/" element={<Home/>}></Route>
+       <Route path="/inventory" element={<Inventory/>}></Route>
+       <Route path="/login" element={<Login/>}></Route>
+     </Routes>
     </div>
   );
 }
