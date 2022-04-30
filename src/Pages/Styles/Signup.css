@@ -1,0 +1,112 @@
+.form-background {
+  background-color: #ffe3cb;
+  width: 480px;
+  padding: 25px;
+  margin: 20px auto;
+  border-radius: 18px;
+}
+
+.input-design {
+  border: none;
+  padding: 10px 15px;
+  outline: none;
+  border-bottom: 3px solid #ff7700;
+  font-weight: 500;
+  margin-top: 20px;
+  display: block;
+  width: 95%;
+  margin: 30px auto;
+  background-color: transparent;
+
+}
+
+.input-design:focus {
+  background-color: transparent;
+  border: transparent !important;
+  box-shadow: none;
+}
+
+.heding-signup {
+  color: #ff7700;
+  text-align: center;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 28px;
+  padding-bottom: 20px;
+}
+
+.level-design {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 18px;
+  color: rgb(113, 113, 113);
+  font-weight: 500;
+  margin: 10px 0px;
+  text-align: center;
+
+}
+
+.signup-button {
+  margin-top: 20px;
+  padding: 7px 60px;
+  background-color: #ff7700;
+  border: 0;
+  color: rgb(239, 239, 239);
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  color: white;
+}
+
+.log-sign {
+  font-size: 18px;
+  text-align: center;
+  padding: 10px 0px;
+  color: rgba(0, 0, 0, 0.713);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.toggle-link {
+  color: #ff7700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.Google-Provider {
+  width: 80%;
+  display: block;
+  background-color: transparent;
+  color: #ff7700;
+  border: 1px solid #ff7700;
+  padding: 8px 20px;
+  font-weight: 500;
+  margin: 0 auto;
+}
+.Google-Provider:hover {
+  background-color: #ff7700;
+  color: white;
+  transition: .8s all ease-in-out;
+  border-radius: 20px;
+}
+
+.Sign-Login {
+  background-color: transparent;
+  color: #ff7700;
+  border: 1px solid #ff7700;
+  padding: 8px 20px;
+  font-weight: 500;
+  border-radius: 20px;
+}
+
+.Sign-Login:hover {
+  background-color: #ff7700;
+  color: white;
+  transition: .8s all ease-in-out;
+}
+
+/* Media quaries */
+@media (max-width:400px) {
+  .form-background {
+    width: 100%;
+  }
+}

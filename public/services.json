@@ -1,51 +1,99 @@
 [
     {
         "name": "2020 Xze BMW 7 Series 730Li",
-        "price": "2500",
-        "quantity":"0",
-        "supplier name":"Cargo-Deller",        
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "price": "45,000",
+        "quantity":"2",
+        "supplierName":"Tesla-Deller",        
+        "description": "The 2020 BMW 7-Series has a much bigger grille, but behind it is a posh, powerful, thirsty luxury sedan thats loaded with tech",
         "img": "https://i.ibb.co/phT2y9S/card1.jpg"
        
     },
     {
         "name": "2020 Camz Ferrari Portofino M",
-        "price": "1200",
-        "quantity":"0",
-        "supplier name":"Toyota-Deller",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "price": "174,900",
+        "quantity":"2",
+        "supplierName":"Toyota-Deller",
+        "description": "The Portofino's twin-turbo V8 engine produces 592 horsepower, good for a 0-100 km/h ",
         "img": " https://i.ibb.co/S5YpTD6/card2.jpg"
     },
     {
         "name": "2020 CamFord Mustang",
-        "price": "1900",
-        "quantity":"0",
-        "supplier name":"Farari-Ltd",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "price": "49,950",
+        "quantity":"3",
+        "supplierName":"Farari-Deller",
+        "description": "SVT Performance Pack, Sync II, Sat Nav, Rear View Camera, Keyless Entry, Push Button Start, Climate Control,",
         "img": " https://i.ibb.co/27V76y6/card3.jpg"
     },
     {
-        "name": "2019 CamFord Explorer Platinum",
-        "price": "1800",
-        "quantity":"0",
-        "supplier name":"Safari-Ltd",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "name": "2019 CamFord Explorer",
+        "price": "45,000",
+        "quantity":"5",
+        "supplierName":"Safari-Deller",
+        "description": "The 2021 Ford Explorer is an iconic SUV akin to no others in its class. This vehicle offers cutting-edge technology.",
         "img": " https://i.ibb.co/FxcmpFq/card4.jpg"
     },
     {
         "name": "2017 Audi A4 1.4 TFSI",
-        "price": "1000",
-        "supplier name":"Cargo-ltd",
-        "quantity":"0",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "price": "45,000",
+        "supplierName":"Cargo-Deller",
+        "quantity":"7",
+        "description": "The A4 is a front-wheel drive 4 door with 5 seats, powered by a 1.4L TURBO 4 engine that has 110 kW of power (at 5000 rpm) ",
         "img": "https://i.ibb.co/F8G6yzm/card5.jpg"
     },
     {
         "name": "2019 Adx Alfa Romeo Giulia GTA",
-        "price": "2700",
-        "supplier name":"Audy-ltd",
-        "quantity":"0",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
+        "price": "57,000",
+        "supplierName":"Audy-Deller",
+        "quantity":"2",
+        "description": "2019 Alfa Romeo Giulia Veloce now available at Alfa Romeo Middelburg. 2.0LkW & 400Nm Torque",
         "img": "https://i.ibb.co/2qGrQ0W/card6.jpg"
+    },
+    {
+        "name": "2020 Honda Civic Turbo",
+        "price": "75,000",
+        "supplierName":"Honda Civic-Deller",
+        "quantity":"3",
+        "description": "A 2020 Honda Civic comes with a 2.0-liter four-cylinder engine that pumps out 158 horsepower. It pairs to a six-speed manual transmission",
+        "img": "https://i.ibb.co/yNqW1Wd/card7.jpg"
+    },
+    {
+        "name": "2018 Honda City 1.3 i",
+        "price": "55,000",
+        "supplierName":"Honda Civic-Deller",
+        "quantity":"2",
+        "description": "The car power to 119PS@6600rpm, the torque is measured 145Nm@4600rpm. Fuel consumption in City Mileage is about 14.3 km/litr",
+        "img": "https://i.ibb.co/FbBqZz0/card8.jpg"
+    },
+    {
+        "name": "2020 Kia Telluride",
+        "price": "79,500",
+        "supplierName":"Telluride-Deller",
+        "quantity":"5",
+        "description": "The Kia Telluride is a mid-size crossover SUV. Originally introduced as a concept car in 2016, the vehicle debuted in the spring of 2019",
+        "img": "https://i.ibb.co/ZSkh5b8/card9.jpg"
+    },
+    {
+        "name": "2017 Audi A8 3.0 TFSI Quattro",
+        "price": "75,800",
+        "supplierName":"Audi-Deller",
+        "quantity":"3",
+        "description": "According to the ProfessCars™ estimation this Audi would accelerate 0-60 mph in 5.5 sec.",
+        "img": "https://i.ibb.co/rZv3RcJ/card10.jpg"
+    },
+    {
+        "name": "2020 Kia Sorento",
+        "price": "80,000",
+        "supplierName":"Sorento-Deller",
+        "quantity":"2",
+        "description": "The Kia Sorento is a mid-size SUV that seats seven in three rows. It's powered by a standard 185-horsepower",
+        "img": "https://i.ibb.co/CV9YtDm/card11.jpg"
+    },
+    {
+        "name": "2020 MG HS 1.5 Turbo",
+        "price": "80,000",
+        "supplierName":"Turbo-Deller",
+        "quantity":"4",
+        "description": "The MG HS comes to the market with a German-inspired drivetrain, with a downsized 1.5-litre turbocharged engine.",
+        "img": "https://i.ibb.co/TTcfQDN/card12.jpg"
     }
 ]

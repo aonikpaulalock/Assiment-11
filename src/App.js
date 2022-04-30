@@ -1,10 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Blogs from './Pages/Blogs/Blogs';
 import Home from './Pages/Home/Home/Home';
 import Inventory from './Pages/Home/Inventory/Inventory';
+import InventoryDetails from './Pages/InventoryDetails/InventoryDetails';
 import Login from './Pages/Login/Login/Login';
+import Signup from './Pages/Login/SignUp/SignUp';
+import Footer from './Pages/Seared/Footer/Footer';
 import Header from './Pages/Seared/Header/Header';
+import Notfound from './Pages/Seared/Notfound/Notfound';
 
 function App() {
   return (
@@ -12,9 +17,13 @@ function App() {
       <Header/>
      <Routes>
        <Route path="/" element={<Home/>}></Route>
-       <Route path="/inventory" element={<Inventory/>}></Route>
+       <Route path="/blogs" element={<Blogs/>}></Route>
+       <Route path="/inventory/:id" element={<InventoryDetails/>}></Route>
        <Route path="/login" element={<Login/>}></Route>
+       <Route path="/signup" element={<Signup/>}></Route>
+       <Route path="*" element={<Notfound/>}></Route>
      </Routes>
+     <Footer/>
     </div>
   );
 }
@@ -23,7 +32,7 @@ export default App;
 
 // Website Insprision
 // Finally
-// https://listing.maxwheelswp.com/home-4/
+// 
 //https://listing.maxwheelswp.com/main-home/
 
 

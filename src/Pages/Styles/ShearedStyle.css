@@ -1,0 +1,14 @@
+.Heading {
+  font-size: 27px;
+  text-align: center;
+  color: #ff7700;
+  font-weight: bold;
+  padding: 20px 0px;
+}
+
+.heading {
+  font-size: 20px;
+  text-align: center;
+  color: #ff7700;
+  font-weight: bold;
+}
