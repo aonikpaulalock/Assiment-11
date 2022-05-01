@@ -12,3 +12,19 @@
   color: #ff7700;
   font-weight: bold;
 }
+
+.Manage-Button {
+  background-color: transparent;
+  color: #ff7700;
+  border: 1px solid #ff7700;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 8px 50px;
+  font-weight: 500;
+  width: 40%;
+}
+.Manage-Button:hover {
+  background-color: #ff7700;
+  color: white;
+  transition: .8s all ease-in-out;
+}

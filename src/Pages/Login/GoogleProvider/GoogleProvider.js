@@ -1,22 +1,22 @@
-import React, { useEffect } from 'react';
 import Google from '../../../Asset/Social/Google.png'
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 
 const GoogleProvider = () => {
+  let location = useLocation();
   const navigate = useNavigate()
-  let errorElement;
+  const from = location?.state?.from?.pathname || '/'
+  let errorStore;
 
-  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle();
+  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
   if (error) {
-    errorElement = <p className="text-danger">Error: {error?.message}</p>
+    errorStore = <p className="text-danger">Error: {error?.message}</p>
   }
-  useEffect(() => {
-    if (user) {
-      navigate('/')
-    }
-  }, [user])
+  if (user) {
+    navigate(from, { replace: true });
+  }
   if (loading) {
     return;
   }
@@ -27,7 +27,7 @@ const GoogleProvider = () => {
         <p className="text-black mt-3 mx-4">OR</p>
         <div className="border border-1 border-warning w-50"></div>
       </div>
-      {errorElement}
+      {errorStore}
       <div className="">
         <button className="Google-Provider" onClick={() => signInWithGoogle()}>
           <div className='d-flex align-items-center justify-content-center'>

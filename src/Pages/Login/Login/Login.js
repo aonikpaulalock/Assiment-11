@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Form } from 'react-bootstrap';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useState } from 'react'
@@ -6,81 +6,90 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import '../../Styles/Signup.css'
 import GoogleProvider from '../GoogleProvider/GoogleProvider';
-// import Loading from '../../Loading/Loading';
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
+import auth from '../../../firebase.init';
+import Loading from '../../Seared/Loading/Loading';
+
 const Login = () => {
   const navigate = useNavigate()
   const location = useLocation()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
   const [loginError, setloginError] = useState('')
   const [
     signInWithEmailAndPassword,
     user,
     loading,
     error,
-  ] = useSignInWithEmailAndPassword();
+  ] = useSignInWithEmailAndPassword(auth);
 
-  const [sendPasswordResetEmail,resetError] = useSendPasswordResetEmail();
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail();
   const from = location?.state?.from?.pathname || '/'
-  // if (loading) {
-  //   return 
-  // }
+  if (loading) {
+    return <Loading />
+  }
   if (user) {
     navigate(from, { replace: true })
   }
 
-  const handleLoginEmail = event => {
-    setEmail(event.target.value);
-  }
 
-  const handleLoginPassword = event => {
-    setPassword(event.target.value)
-  }
-
-  const handleAllSubmit = event => {
+  const handleLoginSubmit = event => {
     event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    console.log(email, password);
 
-    if(password.length < 7 ) {
-    setloginError('Please type minimum 8 charchter')
-    return;
+    if (password.length < 8) {
+      setloginError('Minimum type eight charchter')
+      return;
     }
 
     signInWithEmailAndPassword(email, password)
   }
 
-  const passwordReset = async (event) => {
-    await sendPasswordResetEmail(email);
-    // toast('Reset Password Verifaction Message Sent');
+  const handlePasswordReset = async () => {
+    await sendPasswordResetEmail();
+    toast('Password reset verification send')
   }
-  
+
   return (
     <div className="form-background">
-      <Form onSubmit={handleAllSubmit}>
-        <h3 className="heding-signup">Login</h3>
+      <Form onSubmit={handleLoginSubmit}>
+        <h3 className="heding">Login</h3>
         <Form.Group className="">
-          <Form.Control onBlur={handleLoginEmail} type="email" placeholder="Enter Email"
-            className="input-design" required />
+
+          <Form.Control
+            type="email"
+            name="email"
+            placeholder="Enter Email"
+            className="input"
+            autoComplete='off'
+            required />
+
         </Form.Group>
         <Form.Group className="">
-          <Form.Control onBlur={handleLoginPassword} type="password" placeholder="Password" className="input-design" required />
+
+          <Form.Control
+            type="password"
+            name="password"
+            placeholder="Password"
+            className="input"
+            required />
+
           <h6 className='text-center text-danger'>{loginError}</h6>
         </Form.Group>
-        <button type="submit" className="signup-button">Login</button>
+        <button type="submit" className="LogSign-Button">Login</button>
       </Form>
       <p className="log-sign">
-        New to Wed-Graphy ? <Link to='/signup' className='toggle-link'>Create Account</Link>
+        New to Wed-Graphy ? <Link to='/signup' className='toggle'>Create Account</Link>
       </p>
-      <GoogleProvider/>
+      <GoogleProvider />
       <p className="log-sign">
         Forget Password ?
-        <span className="toggle-link" onClick={passwordReset}> Reset Password</span>
+        <span className="toggle" onClick={handlePasswordReset}> Reset Password</span>
       </p>
       <div>
         <h5 style={{ color: 'red' }}>{error?.message}</h5>
       </div>
-      {/* <ToastContainer /> */}
+
     </div>
   );
 };

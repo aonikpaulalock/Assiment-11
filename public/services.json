@@ -3,7 +3,7 @@
         "name": "2020 Xze BMW 7 Series 730Li",
         "price": "45,000",
         "quantity":"2",
-        "supplierName":"Tesla-Deller",        
+        "supplierName":"Tesla-Deller",      
         "description": "The 2020 BMW 7-Series has a much bigger grille, but behind it is a posh, powerful, thirsty luxury sedan thats loaded with tech",
         "img": "https://i.ibb.co/phT2y9S/card1.jpg"
        
@@ -45,7 +45,7 @@
         "price": "57,000",
         "supplierName":"Audy-Deller",
         "quantity":"2",
-        "description": "2019 Alfa Romeo Giulia Veloce now available at Alfa Romeo Middelburg. 2.0LkW & 400Nm Torque",
+        "description": "2019 Alfa Romeo Giulia Veloce now available at Alfa Romeo Middelburg And 1.4L TURBO 4 engine power110 kW.",
         "img": "https://i.ibb.co/2qGrQ0W/card6.jpg"
     },
     {
@@ -53,7 +53,7 @@
         "price": "75,000",
         "supplierName":"Honda Civic-Deller",
         "quantity":"3",
-        "description": "A 2020 Honda Civic comes with a 2.0-liter four-cylinder engine that pumps out 158 horsepower. It pairs to a six-speed manual transmission",
+        "description": "A 2020 Honda Civic comes with a 2.0-liter four-cylinder engine that pumps out 158 horse power110 kW of power (at 5000 rpm)",
         "img": "https://i.ibb.co/yNqW1Wd/card7.jpg"
     },
     {
