@@ -13,6 +13,7 @@ import Notfound from './Pages/Seared/Notfound/Notfound';
 import RequireAuth from './Pages/Seared/RequireAuth/RequireAuth';
 import ManageProducts from './Pages/ManageProducts/ManageProducts';
 import InventoryDetails from './Pages/InventoryDetails/InventoryDetails';
+import AddItems from './Pages/AddItems/AddItems';
 
 function App() {
   return (
@@ -33,6 +34,14 @@ function App() {
           {
             <RequireAuth>
               <ManageProducts />
+            </RequireAuth>
+          }>
+
+        </Route>
+        <Route path="/inventory/manageProduct/AddItem" element=
+          {
+            <RequireAuth>
+              <AddItems/>
             </RequireAuth>
           }>
 

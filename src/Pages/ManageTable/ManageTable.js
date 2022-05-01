@@ -14,7 +14,7 @@ const ManageTable = ({ product }) => {
         <td className="text-center pt-4 fw-bold">$ {price}</td>
         <td className="text-center pt-4">
           <button className="All-Button">Delete</button>
-          <button className="All-Button" onClick={()=>navigate("/") }>Add Items</button>
+          <button className="All-Button" onClick={()=>navigate("/inventory/manageProduct/AddItem") }>Add Items</button>
         </td>
       </tr>
     </tbody>
