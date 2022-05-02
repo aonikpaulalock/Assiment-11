@@ -1,17 +1,21 @@
 import axios from 'axios';
 import React from 'react';
 import { Form } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const AddItems = () => {
+  const [user] = useAuthState(auth)
   const handleAddProduct = async (event) => {
     event.preventDefault()
     const name = event.target.name.value;
     const description = event.target.description.value;
     const price = event.target.price.value;
     const img = event.target.img.value;
-    console.log(name, description, price, img);
-    const user = { name, description, price, img }
-    const { data } = await axios.post("http://localhost:5000/productAdd", user)
+    const email = user.email;
+    console.log(name, description, price, img, email);
+    const Adduser = { name, description, price, img, email }
+    const { data } = await axios.post("http://localhost:5000/productAdd", Adduser)
     console.log(data)
   }
   return (
@@ -21,6 +25,12 @@ const AddItems = () => {
           <h3 className="heding">Add Items</h3>
           <Form.Group className="">
             <Form.Control type="text" name="name" placeholder="Name"
+              className="input"
+              required
+            />
+          </Form.Group>
+          <Form.Group className="">
+            <Form.Control type="email" value={user.email} placeholder="Name" readOnly
               className="input"
               required
             />

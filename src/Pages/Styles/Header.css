@@ -1,5 +1,14 @@
 .header {
-  background-color:#fffbf8;
+  background-color: #fffbf8;
   padding: 5px;
   box-shadow: 3px 3px 8px #d4d4d4;
+}
+
+.Sheared-Color {
+  color: #15027162 !important;
+  ;
+}
+
+.brand {
+  color: #15027193 !important;
 }
