@@ -15,8 +15,14 @@ const AddItems = () => {
     const email = user.email;
     console.log(name, description, price, img, email);
     const Adduser = { name, description, price, img, email }
+
     const { data } = await axios.post("http://localhost:5000/productAdd", Adduser)
-    console.log(data)
+    console.log(data);
+
+    // await axios.post("http://localhost:5000/myItem", Adduser)
+    // .then(response => {
+    //   console.log(response);
+    // })
   }
   return (
     <div>
