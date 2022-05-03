@@ -5,7 +5,6 @@ import DefaultCarDetais from '../DefaultCarDetais/DefaultCarDetais';
 const Inventory = () => {
   const [cars, setCars] = useState([])
   const navigate = useNavigate() ;
-  console.log(cars);
   useEffect(() => {
     fetch("http://localhost:5000/products")
       .then(res => res.json())

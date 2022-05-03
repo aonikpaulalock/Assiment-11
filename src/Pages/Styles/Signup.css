@@ -95,7 +95,7 @@
 }
 
 /* Media quaries */
-@media (max-width:400px) {
+@media (max-width:480px) {
   .form-background {
     width: 100%;
   }

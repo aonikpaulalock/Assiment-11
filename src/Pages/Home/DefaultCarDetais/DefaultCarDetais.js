@@ -6,7 +6,7 @@ const DefaultCarDetais = ({ cars }) => {
   const { _id,name, supplierName, img, price, quantity, description } = cars;
    const navigate = useNavigate()
   return (
-    <div className="col-md-4">
+    <div className="col-lg-4 col-md-6">
       <Card className="border-0 shadow p-2">
         <Card.Img variant="top" src={img} />
         <Card.Body>
@@ -19,7 +19,7 @@ const DefaultCarDetais = ({ cars }) => {
             <h5>Price: $ {price}</h5>
             <h6>Quantity : {quantity}</h6>
           </div>
-          <div className=" w-50 mx-auto">
+          <div className="text-center">
           <button className="All-Button" onClick={()=>navigate(`/inventory/${_id}`)}>Update</button>
         </div>
       </Card.Body>

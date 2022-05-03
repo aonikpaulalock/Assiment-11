@@ -9,6 +9,7 @@ import GoogleProvider from '../GoogleProvider/GoogleProvider';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../Seared/Loading/Loading';
+import axios from 'axios';
 
 const Login = () => {
   const navigate = useNavigate()
@@ -26,23 +27,23 @@ const Login = () => {
   if (loading) {
     return <Loading />
   }
-  if (user) {
-    navigate(from, { replace: true })
-  }
-
-
-  const handleLoginSubmit = event => {
+  const handleLoginSubmit = async(event) => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
-    console.log(email, password);
-
+    const {data} = await axios.post('http://localhost:5000/login',{email})
+    localStorage.setItem("tokenAccess",data.tokenAccess)
+    await signInWithEmailAndPassword(email, password)
     if (password.length < 8) {
       setloginError('Minimum type eight charchter')
       return;
     }
+    navigate(from, { replace: true })
 
-    signInWithEmailAndPassword(email, password)
+
+  }
+  if (user) {
+    // navigate(from, { replace: true })
   }
 
   const handlePasswordReset = async () => {

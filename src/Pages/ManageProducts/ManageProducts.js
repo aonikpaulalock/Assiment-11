@@ -38,14 +38,15 @@ const ManageProducts = () => {
     }
   }
   return (
-    <div className="container my-4">
-      <Table striped bordered hover borderless className="shadow rounded">
+    <div className="container">
+      <div className="row table-manage my-3">
+      <Table striped bordered hover borderless className="shadow rounded w-sm-100 w-0">
         <thead>
           <tr className='text-center'>
             <th>Image</th>
             <th className="fw-bold">Name</th>
             <th className="fw-bold">Price</th>
-            <th>Delete And Add Items</th>
+            <th>Manage</th>
           </tr>
         </thead>
         <tbody>
@@ -55,13 +56,13 @@ const ManageProducts = () => {
               return (
                 <tr key={product._id} className="text-center">
                   <td>
-                    <img src={product.img} alt="" className='img-fluid' height={50} width={150} />
+                    <img src={product.img} alt="" className="img-fluid" width={100} height={50}/>
                   </td>
                   <td className="text-center pt-4 fw-bold">{product.name}</td>
                   <td className="text-center pt-4 fw-bold">$ {product.price}</td>
                   <td className="text-center pt-4">
-                    <button className="All-Button" onClick={() => handleDelete(product._id)}>Delete</button>
-                    <button className="All-Button" onClick={() => navigate("/inventory/manageProduct/AddItem")}>Add Items</button>
+                    <button className="manage-btn" onClick={() => handleDelete(product._id)}>Delete</button>
+                    <button className="manage-btn" onClick={() => navigate("/inventory/manageProduct/AddItem")}>Add</button>
                   </td>
                 </tr>
               )
@@ -69,6 +70,7 @@ const ManageProducts = () => {
           }
         </tbody>
       </Table>
+      </div>
     </div >
   );
 };

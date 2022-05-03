@@ -1,47 +1,35 @@
-.banner {
-  background-image: url("../../Asset/Banner/banner1\ \(1\).png");
-  height: 86vh;
-  background-position: center center;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
-
-.content {
-  width: 50%;
-  margin: 0 auto;
-  padding-top: 100px;
-}
-
-.content h1 {
-  font-size: 50px;
-  font-weight: 700;
-  color: rgb(238, 238, 238);
-  padding: 5px 0px;
-  text-align: center;
-}
-
-.content p {
-  font-size: 18px;
-  text-align: center;
-  color: rgb(238, 238, 238);
-  padding-bottom: 8px;
-  font-weight: 500;
-}
 
 /* background: #ff7700 !important;
     border: 1px solid #ff7700 ! */
 /* color: rgb(238, 238, 238); */
+.content {
+  margin-left: 20px;
+  margin-top: 50px;
+}
+.content h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: rgb(58, 56, 56);
+  margin-left: 8px;
+}
+.content span {
+  color: #ff7700;
+  font-size: 44px;
+}
+.content p {
+  font-size: 17px;
+  font-weight: 500;
+  color: rgb(154, 152, 152);
+  margin-left: 8px;
+  padding: 10px 0px;
+  
+}
 .All-Button {
   background-color: transparent;
   color: #ff7700;
   border: 1px solid #ff7700;
-  display: inline-block;
-  margin: 0 10px;
-  padding: 8px 50px;
+  padding: 8px 30px;
   font-weight: 500;
-  /* transition: 1s linear; */
 }
 
 .All-Button:hover {
@@ -49,3 +37,9 @@
   color: white;
   transition: .8s all ease-in-out;
 }
+
+
+/* media Quaries */
+/* @media () {
+  
+} */

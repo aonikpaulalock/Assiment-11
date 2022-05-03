@@ -33,7 +33,6 @@ const InventoryDetails = () => {
   const handleAddQuantity = async (event) => {
     event.preventDefault()
     const newQuantity = event.target.number?.value;
-    console.log(newQuantity);
     const quantity = parseInt(newQuantity) + parseInt(products?.quantity)
     await axios.put(`http://localhost:5000/product/${id}`, {
       quantity,
@@ -43,9 +42,9 @@ const InventoryDetails = () => {
       })
   }
   return (
-    <div className="container my-5">
-      <div className="row border-1 shadow p-3">
-        <div className="col-md-6 mt-5">
+    <div className="container my-0 my-md-5">
+      <div className="row">
+        <div className="col-lg-6 mt-5">
           <div className="form-background">
             <Form onSubmit={handleAddQuantity}>
               <h3 className="heding">Delevered</h3>
@@ -62,7 +61,7 @@ const InventoryDetails = () => {
             </Form>
           </div>
         </div>
-        <div className='col-md-6'>
+        <div className='col-lg-6'>
           <Card className="shadow border-0">
             <Card.Img variant="top" src={products.img} />
             <Card.Body className="text-center">
@@ -75,14 +74,14 @@ const InventoryDetails = () => {
                 <h5>Price: $ {products.price}</h5>
                 <h5>Quantity : {products.quantity}</h5>
               </div>
-              <div className=" d-block w-50 mx-auto">
+              <div className="d-block w-100 mx-auto">
                 <button className="All-Button" onClick={handleDelevered}>Delevered</button>
               </div>
             </Card.Body>
           </Card>
         </div>
       </div>
-      <div className="w-100 d-block text-center pt-3">
+      <div className="w-100 d-block text-center my-3">
         <button className="Manage-Button" onClick={()=>navigate('/inventory/manageProduct')}>Manage-Inventory</button>
       </div>
     </div>

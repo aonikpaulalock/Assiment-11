@@ -13,16 +13,12 @@ const AddItems = () => {
     const price = event.target.price.value;
     const img = event.target.img.value;
     const email = user.email;
-    console.log(name, description, price, img, email);
     const Adduser = { name, description, price, img, email }
-
-    const { data } = await axios.post("http://localhost:5000/productAdd", Adduser)
-    console.log(data);
-
-    // await axios.post("http://localhost:5000/myItem", Adduser)
-    // .then(response => {
-    //   console.log(response);
-    // })
+  // User Post
+    await axios.post("http://localhost:5000/productAdd", Adduser)
+     .then(response => {
+         event.target.reset()
+    })
   }
   return (
     <div>
