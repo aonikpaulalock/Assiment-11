@@ -59,6 +59,7 @@ const AddItems = () => {
               name="img"
               placeholder="Image Url"
               className="input"
+              autoComplete='off'
               required />
           </Form.Group>
           <button type="submit" className="LogSign-Button">Add Items</button>

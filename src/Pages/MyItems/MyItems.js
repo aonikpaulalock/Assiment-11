@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import {useNavigate} from "react-router-dom";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import axios from 'axios';
 import { Table } from 'react-bootstrap';
+import { signOut } from 'firebase/auth';
 const MyItems = () => {
+  const navigate = useNavigate() ;
   const [user] = useAuthState(auth)
   const [myItem, setMyItem] = useState([])
   useEffect(() => {
@@ -19,7 +22,11 @@ const MyItems = () => {
        setMyItem(data)
      }
      catch(error){
-       console.log()
+       console.log(error.message)
+       if(error.response.status === 401 || error.response.status === 403){
+         navigate('/login')
+         signOut(auth)
+       }
      }
        }
     myItems()
