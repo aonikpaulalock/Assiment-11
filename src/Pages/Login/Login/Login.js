@@ -14,6 +14,7 @@ import axios from 'axios';
 const Login = () => {
   const navigate = useNavigate()
   const location = useLocation()
+  const [email,setEmail] = useState('')
   const [loginError, setloginError] = useState('')
   const [
     signInWithEmailAndPassword,
@@ -22,17 +23,17 @@ const Login = () => {
     error,
   ] = useSignInWithEmailAndPassword(auth);
 
-  const [sendPasswordResetEmail] = useSendPasswordResetEmail();
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
   const from = location?.state?.from?.pathname || '/'
   if (loading) {
     return <Loading />
   }
-  const handleLoginSubmit = async(event) => {
+  const handleLoginSubmit = async (event) => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
-    const {data} = await axios.post('http://localhost:5000/login',{email})
-    localStorage.setItem("tokenAccess",data.tokenAccess)
+    const { data } = await axios.post('http://localhost:5000/login', { email })
+    localStorage.setItem("tokenAccess", data.tokenAccess)
     await signInWithEmailAndPassword(email, password)
     if (password.length < 8) {
       setloginError('Minimum type eight charchter')
@@ -45,9 +46,11 @@ const Login = () => {
   if (user) {
     // navigate(from, { replace: true })
   }
-
-  const handlePasswordReset = async () => {
-    await sendPasswordResetEmail();
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  }
+  const handlePasswordReset = async (e) => {
+    await sendPasswordResetEmail(email);
     toast('Password reset verification send')
   }
 
@@ -60,6 +63,7 @@ const Login = () => {
           <Form.Control
             type="email"
             name="email"
+            onChange={handleEmail}
             placeholder="Enter Email"
             className="input"
             autoComplete='off'
