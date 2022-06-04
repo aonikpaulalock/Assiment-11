@@ -7,7 +7,7 @@ const ManageProducts = () => {
   const navigate = useNavigate()
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://fathomless-cove-99393.herokuapp.com/products")
       .then(res => res.json())
       .then(data => setProducts(data))
   }, [products._id])
@@ -16,7 +16,7 @@ const ManageProducts = () => {
     const confirmDelete = window.confirm("Are You Sure Delete Data")
     console.log(id);
     // if(confirmDelete){
-    //     const url =`http://localhost:5000/productDelete/${id}`
+    //     const url =`https://fathomless-cove-99393.herokuapp.com/productDelete/${id}`
     //     fetch(url,{
     //       method:"DELETE",
     //     })
@@ -28,7 +28,7 @@ const ManageProducts = () => {
     //     })
     // }
     if (confirmDelete) {
-      const url = `http://localhost:5000/productDelete/${id}`
+      const url = `https://fathomless-cove-99393.herokuapp.com/productDelete/${id}`
       await axios
         .delete(url)
         .then(response => {

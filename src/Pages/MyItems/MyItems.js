@@ -12,7 +12,7 @@ const MyItems = () => {
   useEffect(() => {
     const myItems = async () => {
       const email = user.email;
-      const url = `http://localhost:5000/productAddPerEmail?email=${email}`
+      const url = `https://fathomless-cove-99393.herokuapp.com/productAddPerEmail?email=${email}`
        try{
         const { data } = await axios.get(url,{
           headers : {
@@ -35,7 +35,7 @@ const MyItems = () => {
   const handleDelete = async (id) => {
     const confirmDelete = window.confirm("Are You Sure Delete Data")
     if (confirmDelete) {
-      const url = `http://localhost:5000/productDelete/${id}`
+      const url = `https://fathomless-cove-99393.herokuapp.com/productDelete/${id}`
       await axios
         .delete(url)
         .then(response => {

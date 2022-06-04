@@ -15,7 +15,7 @@ const AddItems = () => {
     const email = user.email;
     const Adduser = { name, description, price, img, email }
   // User Post
-    await axios.post("http://localhost:5000/productAdd", Adduser)
+    await axios.post("https://fathomless-cove-99393.herokuapp.com/productAdd", Adduser)
      .then(response => {
          event.target.reset()
     })

@@ -12,7 +12,7 @@ const InventoryDetails = () => {
   useEffect(() => {
     (async () => {
       const { data } = await axios.get(
-        `http://localhost:5000/product/${id}`
+        `https://fathomless-cove-99393.herokuapp.com/product/${id}`
       );
       setProducts(data);
       setDecrease(data.quantity);
@@ -22,7 +22,7 @@ const InventoryDetails = () => {
   const handleDelevered = () => {
     const quantity = decraese - 1;
     axios.put(
-      `http://localhost:5000/product/${id}`, {
+      `https://fathomless-cove-99393.herokuapp.com/product/${id}`, {
       quantity
     })
       .then(response => {
@@ -34,7 +34,7 @@ const InventoryDetails = () => {
     event.preventDefault()
     const newQuantity = event.target.number?.value;
     const quantity = parseInt(newQuantity) + parseInt(products?.quantity)
-    await axios.put(`http://localhost:5000/product/${id}`, {
+    await axios.put(`https://fathomless-cove-99393.herokuapp.com/product/${id}`, {
       quantity,
     })
       .then(response => {

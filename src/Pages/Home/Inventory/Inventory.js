@@ -6,7 +6,7 @@ const Inventory = () => {
   const [cars, setCars] = useState([])
   const navigate = useNavigate() ;
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://fathomless-cove-99393.herokuapp.com/products")
       .then(res => res.json())
       .then(data => {
         setCars(data)
