@@ -7,13 +7,13 @@ This project was bootstrapped with (https://backend-assiment-11.firebaseapp.com/
 I was try makes done Car-Deler-Management-Website and unique design and some functionality.
 
 # Features 
-* six section was of make home  page.
-* makes google , email and pasword authentication ;
+* It is warehouse management website
+* Users can quickly log in there by Email-password and log in with a google
+ account
+* If user has been login there account they can easily manage threr order.
 * if user login then update button clicked data shows details products
 * create manage-inventory,and my items pages ,mange-inventory page shows all data tabel and my items page show per user email items 
-* use login jwt token if user not token then my items page clicked and user logout and navigate login page
-* home section shows 6 data inventories page  and others data    shows manage inventory route page and data shows table.
-* 
+* use login jwt token if user not token then my items page clicked and user  logout and navigate login page
 
 
 ## Available Scripts
